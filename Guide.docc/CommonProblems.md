@@ -705,7 +705,7 @@ actor BackgroundStyler {
     private let store = StyleStore()
 
     deinit {
-        // ここにアクター隔離はないので、タスクに引き継がれる隔離はありません
+        // ここにアクター隔離はないので、タスクに引き継がれる隔離がありません
         Task { [store] in
             await store.stopNotifications()
         }
